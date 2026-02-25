@@ -1,0 +1,273 @@
+<footer class="art-footer">
+  <div class="wrap">
+    <div class="top">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <b>ART</b>
+          <small>تجربة تسوّق فاخرة بلمسة وردية بسيطة</small>
+        </div>
+      </div>
+
+      <div class="cols">
+        <div class="col">
+          <h4>اكتشفي</h4>
+          <a href="index.html#new">جديدنا</a>
+          <a href="index.html#products">المنتجات</a>
+          <a href="index.html#offers">العروض</a>
+          <a href="index.html#about">عن ART</a>
+        </div>
+
+        <div class="col">
+          <h4>الدعم</h4>
+          <a href="#!" id="policyBtn">سياسة الاسترجاع</a>
+          <a href="#!" id="shippingBtn">الشحن والتوصيل</a>
+          <a href="#!" id="contactBtn">تواصل معنا</a>
+        </div>
+
+        <div class="col">
+          <h4>النشرة</h4>
+          <p>اشتركي ليصلك كل جديد ✨</p>
+          <div class="news">
+            <input id="newsEmail" type="email" placeholder="بريدك الإلكتروني" autocomplete="email" />
+            <button id="newsBtn" type="button">اشتراك</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <span>© <span id="y"></span> ART</span>
+      <span class="dotline"></span>
+      <span>Black & White • Pink Accent</span>
+    </div>
+  </div>
+
+  <style>
+    :root{
+      --bg:#070708;
+      --panel:#0f0f12;
+      --text:#ffffff;
+      --muted:rgba(255,255,255,.72);
+      --line:rgba(255,255,255,.10);
+      --pink:#ff4fa3;
+      --pink2:#ff86c7;
+      --shadow: 0 14px 40px rgba(0,0,0,.55);
+      --radius:18px;
+      --container: 1120px;
+    }
+
+    *{ box-sizing:border-box; }
+    .art-footer{
+      margin-top: 26px;
+      border-top: 1px solid rgba(255,255,255,.10);
+      background:
+        radial-gradient(500px 220px at 30% 0%, rgba(255,79,163,.10), transparent 55%),
+        linear-gradient(180deg, rgba(7,7,8,.8), rgba(7,7,8,1));
+      color: #fff;
+    }
+    .wrap{
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 22px 16px 16px;
+    }
+
+    .top{
+      display:flex;
+      gap: 16px;
+      align-items:flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .brand{
+      display:flex; align-items:center; gap: 10px;
+      padding: 14px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.03);
+      box-shadow: var(--shadow);
+      min-width: 280px;
+      flex: 1;
+    }
+    .logo{
+      width: 44px; height: 44px;
+      border-radius: 16px;
+      background:
+        radial-gradient(18px 18px at 35% 35%, rgba(255,79,163,.85), transparent 60%),
+        radial-gradient(22px 22px at 75% 75%, rgba(255,134,199,.45), transparent 62%),
+        linear-gradient(135deg, #19191f, #070708);
+      border: 1px solid rgba(255,255,255,.12);
+    }
+    .brand b{ font-size: 18px; letter-spacing:.8px; }
+    .brand small{ display:block; margin-top: 2px; color: var(--muted); }
+
+    .cols{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(160px, 1fr));
+      gap: 12px;
+      flex: 2;
+      min-width: 520px;
+    }
+
+    .col{
+      padding: 14px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.02);
+    }
+
+    .col h4{
+      margin: 0 0 10px;
+      font-size: 14px;
+      display:flex;
+      align-items:center;
+      gap: 8px;
+    }
+    .col h4::before{
+      content:"";
+      width:10px; height:10px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--pink), var(--pink2));
+      box-shadow: 0 0 0 4px rgba(255,79,163,.12);
+    }
+
+    .col a{
+      display:block;
+      text-decoration:none;
+      color: rgba(255,255,255,.78);
+      font-size: 13px;
+      padding: 8px 10px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      transition:.18s ease;
+      width: fit-content;
+    }
+    .col a:hover{
+      color:#fff;
+      background: rgba(255,255,255,.06);
+      border-color: rgba(255,255,255,.10);
+    }
+
+    .col p{
+      margin: 0 0 10px;
+      color: rgba(255,255,255,.75);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .news{
+      display:flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .news input{
+      flex:1;
+      min-width: 200px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      padding: 10px 12px;
+      color:#fff;
+      outline:none;
+      font-size: 13px;
+    }
+    .news button{
+      cursor:pointer;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.14);
+      padding: 10px 14px;
+      font-size: 13px;
+      font-weight: 900;
+      background: #fff;
+      color:#0b0b0d;
+      transition:.18s ease;
+    }
+    .news button:hover{ transform: translateY(-1px); background:#f5f5f5; }
+
+    .bottom{
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255,255,255,.10);
+      display:flex;
+      gap: 10px;
+      align-items:center;
+      justify-content:center;
+      color: rgba(255,255,255,.65);
+      font-size: 12px;
+      flex-wrap: wrap;
+    }
+    .dotline{
+      width: 34px; height: 1px;
+      background: rgba(255,255,255,.22);
+      position: relative;
+    }
+    .dotline::after{
+      content:"";
+      width:8px;height:8px;border-radius:999px;
+      background: rgba(255,79,163,.85);
+      box-shadow: 0 0 0 4px rgba(255,79,163,.12);
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform: translate(-50%,-50%);
+    }
+
+    @media (max-width: 980px){
+      .cols{ grid-template-columns: 1fr; min-width: 100%; }
+    }
+  </style>
+
+  <script>
+    (function(){
+      const y = document.getElementById("y");
+      if (y) y.textContent = String(new Date().getFullYear());
+
+      function isValidEmail(v){
+        return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(String(v||"").trim());
+      }
+
+      function toast(msg){
+        let t = document.getElementById("artToast");
+        if(!t){
+          t = document.createElement("div");
+          t.id = "artToast";
+          t.style.cssText = `
+            position:fixed; bottom:18px; left:18px; z-index:9999;
+            padding:12px 14px; border-radius:14px;
+            background: rgba(15,15,18,.94);
+            border:1px solid rgba(255,255,255,.12);
+            color:#fff; font-size:13px;
+            box-shadow: 0 16px 50px rgba(0,0,0,.55);
+            backdrop-filter: blur(12px);
+            opacity:0; transform: translateY(6px);
+            transition:.22s ease;
+          `;
+          document.body.appendChild(t);
+        }
+        t.textContent = msg;
+        requestAnimationFrame(() => { t.style.opacity = "1"; t.style.transform = "translateY(0)"; });
+        setTimeout(() => { t.style.opacity = "0"; t.style.transform = "translateY(6px)"; }, 1700);
+      }
+
+      const email = document.getElementById("newsEmail");
+      const btn = document.getElementById("newsBtn");
+      btn && btn.addEventListener("click", () => {
+        const v = (email && email.value) ? email.value : "";
+        if (!isValidEmail(v)) return toast("اكتبي بريد صحيح 🌸");
+        toast("تم الاشتراك ✨");
+        if (email) email.value = "";
+      });
+
+      const map = [
+        ["policyBtn","سياسة الاسترجاع: خلال 7 أيام بشرط وجود العبوة."],
+        ["shippingBtn","الشحن والتوصيل: 2-5 أيام عمل داخل المملكة."],
+        ["contactBtn","تواصل معنا: أضيفي صفحة Contact لاحقًا."]
+      ];
+      map.forEach(([id,msg]) => {
+        const el = document.getElementById(id);
+        el && el.addEventListener("click", (e) => { e.preventDefault(); toast(msg); });
+      });
+    })();
+  </script>
+</footer>
