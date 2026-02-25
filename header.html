@@ -4,14 +4,12 @@
       <div class="logo" aria-hidden="true">
         <img src="media/m.jpeg" alt="ART Logo" loading="lazy">
       </div>
-
       <div class="brand-title">
         <b>ART</b>
         <span>Beauty • Makeup</span>
       </div>
     </a>
 
-    <!-- Desktop nav -->
     <nav class="nav nav--desktop" aria-label="القائمة">
       <a href="#new">جديدنا</a>
       <a href="#products">المنتجات</a>
@@ -35,15 +33,12 @@
         السلة <span class="badge badge--pink" id="cartCount">0</span>
       </button>
 
-      <!-- Mobile burger -->
-      <button class="burger" id="burgerBtn" type="button"
-        aria-label="فتح القائمة" aria-controls="mobileDrawer" aria-expanded="false">
+      <button class="burger" id="burgerBtn" type="button" aria-label="فتح القائمة" aria-controls="mobileDrawer" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </div>
 
-  <!-- Mobile Drawer -->
   <div class="drawer-overlay" id="drawerOverlay" hidden></div>
 
   <aside class="drawer" id="mobileDrawer" aria-hidden="true">
@@ -95,7 +90,6 @@
       --radius:18px;
       --container: 1120px;
     }
-
     *{ box-sizing:border-box; }
 
     .art-header{
@@ -128,54 +122,17 @@
       position: relative;
       overflow: hidden;
       border: 2px solid rgba(255,255,255,.72);
-      box-shadow:
-        0 10px 30px rgba(0,0,0,.55),
-        0 0 0 4px rgba(255,79,163,.10);
+      box-shadow: 0 10px 30px rgba(0,0,0,.55), 0 0 0 4px rgba(255,79,163,.10);
       background: #111;
       flex: 0 0 auto;
     }
-    .logo img{
-      width:100%; height:100%;
-      display:block;
-      object-fit: cover;
-      transform: scale(1.02);
-      filter: contrast(1.05) saturate(1.02);
-    }
-    .logo::after{
-      content:"";
-      position:absolute; inset:-60%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,.22), transparent);
-      transform: rotate(22deg);
-      animation: shine 3.3s linear infinite;
-      pointer-events:none;
-    }
-    .logo::before{
-      content:"";
-      position:absolute;
-      width: 9px; height: 9px;
-      border-radius: 999px;
-      background: rgba(255,79,163,.95);
-      box-shadow: 0 0 0 4px rgba(255,79,163,.14);
-      right: -2px;
-      bottom: -2px;
-      border: 2px solid rgba(7,7,8,.85);
-    }
-    @keyframes shine{
-      0%{ transform: translateX(-30%) rotate(22deg); }
-      100%{ transform: translateX(30%) rotate(22deg); }
-    }
+    .logo img{ width:100%; height:100%; display:block; object-fit: cover; }
 
     .brand-title{ line-height:1.1; min-width:0; }
     .brand-title b{ font-size: 18px; letter-spacing:.8px; }
     .brand-title span{
-      display:block;
-      font-size: 12px;
-      color: var(--muted);
-      margin-top: 2px;
-      white-space: nowrap;
-      overflow:hidden;
-      text-overflow: ellipsis;
-      max-width: 220px;
+      display:block; font-size: 12px; color: var(--muted); margin-top: 2px;
+      white-space: nowrap; overflow:hidden; text-overflow: ellipsis; max-width: 220px;
     }
 
     .nav{
@@ -194,11 +151,7 @@
       transition:.18s ease;
       border: 1px solid transparent;
     }
-    .nav a:hover{
-      color: var(--text);
-      background: rgba(255,255,255,.06);
-      border-color: rgba(255,255,255,.10);
-    }
+    .nav a:hover{ color: var(--text); background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.10); }
 
     .actions{
       display:flex;
@@ -242,23 +195,16 @@
     .chip:hover{ transform: translateY(-1px); background: rgba(255,255,255,.07); }
 
     .chip--invert{
-      background: #fff;
-      color: #0b0b0d;
+      background: #fff; color: #0b0b0d;
       border-color: rgba(255,255,255,.55);
     }
     .chip--invert:hover{ background:#f5f5f5; }
 
     .badge{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-width: 18px;
-      height: 18px;
-      padding: 0 6px;
-      border-radius: 999px;
-      margin-inline-start: 6px;
-      font-size: 11px;
-      font-weight: 900;
+      display:inline-flex; align-items:center; justify-content:center;
+      min-width: 18px; height: 18px; padding: 0 6px;
+      border-radius: 999px; margin-inline-start: 6px;
+      font-size: 11px; font-weight: 900;
       background: rgba(255,255,255,.10);
       border: 1px solid rgba(255,255,255,.18);
       color: #fff;
@@ -271,9 +217,8 @@
 
     /* Burger */
     .burger{
-      display:none; /* desktop hidden */
-      width: 44px;
-      height: 44px;
+      display:none;
+      width: 44px; height: 44px;
       border-radius: 14px;
       border: 1px solid rgba(255,255,255,.12);
       background: rgba(255,255,255,.04);
@@ -285,28 +230,17 @@
       padding: 0;
       flex: 0 0 auto;
     }
-    .burger:hover{ transform: translateY(-1px); background: rgba(255,255,255,.06); }
-    .burger span{
-      display:block;
-      width: 18px;
-      height: 2px;
-      background: rgba(255,255,255,.92);
-      border-radius: 99px;
-    }
+    .burger span{ display:block; width: 18px; height: 2px; background: rgba(255,255,255,.92); border-radius: 99px; }
 
-    /* Overlay + Drawer */
+    /* Drawer */
     .drawer-overlay{
-      position: fixed;
-      inset: 0;
+      position: fixed; inset: 0;
       background: rgba(0,0,0,.55);
       backdrop-filter: blur(6px);
       z-index: 200;
     }
-
     .drawer{
-      position: fixed;
-      top: 0;
-      right: 0;
+      position: fixed; top: 0; right: 0;
       height: 100dvh;
       width: min(86vw, 360px);
       background:
@@ -325,25 +259,18 @@
     .drawer.is-open{ transform: translateX(0); }
 
     .drawer__top{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 10px;
+      display:flex; align-items:center; justify-content:space-between; gap: 10px;
       padding-bottom: 10px;
       border-bottom: 1px solid rgba(255,255,255,.10);
     }
-
     .drawer__brand{ display:flex; align-items:center; gap: 10px; }
     .drawer__logo{
-      width: 44px; height: 44px; border-radius: 999px;
-      overflow:hidden;
+      width: 44px; height: 44px; border-radius: 999px; overflow:hidden;
       border: 2px solid rgba(255,255,255,.72);
       box-shadow: 0 10px 30px rgba(0,0,0,.45);
       background:#111;
-      flex: 0 0 auto;
     }
     .drawer__logo img{ width:100%; height:100%; object-fit: cover; display:block; }
-
     .drawer__brand b{ font-size: 16px; letter-spacing:.6px; color:#fff; display:block; }
     .drawer__brand small{ color: rgba(255,255,255,.68); display:block; margin-top: 2px; }
 
@@ -355,17 +282,9 @@
       color:#fff;
       cursor:pointer;
       font-size: 18px;
-      transition:.18s ease;
-      flex: 0 0 auto;
     }
-    .drawer__close:hover{ transform: translateY(-1px); background: rgba(255,255,255,.06); }
 
-    .drawer__nav{
-      display:flex;
-      flex-direction:column;
-      gap: 8px;
-      padding-top: 6px;
-    }
+    .drawer__nav{ display:flex; flex-direction:column; gap: 8px; padding-top: 6px; }
     .drawer__nav a{
       text-decoration:none;
       color: rgba(255,255,255,.88);
@@ -375,18 +294,10 @@
       border-radius: 14px;
       border: 1px solid rgba(255,255,255,.10);
       background: rgba(255,255,255,.03);
-      transition: .18s ease;
     }
-    .drawer__nav a:hover{ background: rgba(255,255,255,.06); transform: translateY(-1px); }
 
     .drawer__divider{ margin-top: 6px; height: 1px; background: rgba(255,255,255,.10); }
-
-    .drawer__actions{
-      display:flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      padding-top: 4px;
-    }
+    .drawer__actions{ display:flex; gap: 10px; flex-wrap: wrap; padding-top: 4px; }
     .drawer__chip{
       cursor:pointer;
       border-radius: 14px;
@@ -397,38 +308,22 @@
       font-weight: 1000;
       flex: 1;
       min-width: 130px;
-      transition:.18s ease;
     }
-    .drawer__chip:hover{ background: rgba(255,255,255,.06); transform: translateY(-1px); }
-
     .drawer__badge{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-width: 18px;
-      height: 18px;
-      padding: 0 6px;
-      border-radius: 999px;
-      margin-inline-start: 8px;
-      font-size: 11px;
-      font-weight: 1000;
+      display:inline-flex; align-items:center; justify-content:center;
+      min-width: 18px; height: 18px; padding: 0 6px;
+      border-radius: 999px; margin-inline-start: 8px;
+      font-size: 11px; font-weight: 1000;
       background: rgba(255,79,163,.18);
       border: 1px solid rgba(255,79,163,.35);
       color: #fff;
     }
+    .drawer__hint{ margin-top: auto; margin-bottom: 6px; color: rgba(255,255,255,.60); font-size: 12px; text-align:center; }
 
-    .drawer__hint{
-      margin-top: auto;
-      margin-bottom: 6px;
-      color: rgba(255,255,255,.60);
-      font-size: 12px;
-      line-height: 1.7;
-      text-align:center;
-    }
-
-    /* ✅ Mobile layout fix (This fixes burger visibility/placement) */
+    /* Mobile layout (يضمن ظهور البرجر) */
     @media (max-width: 920px){
       .nav--desktop{ display:none; }
+      .burger{ display:inline-flex; }
 
       .art-header__wrap{
         grid-template-columns: 1fr auto;
@@ -436,27 +331,13 @@
           "brand burger"
           "actions actions";
         gap: 10px;
-        align-items:center;
       }
 
       .brand{ grid-area: brand; }
-      .actions{
-        grid-area: actions;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-      }
+      .actions{ grid-area: actions; justify-content:flex-start; flex-wrap:wrap; }
+      .burger{ grid-area: burger; justify-self:end; }
 
-      .burger{
-        display:inline-flex;
-        grid-area: burger;
-        justify-self: end;
-      }
-
-      .search{
-        min-width: 100%;
-        max-width: 100%;
-        order: 1;
-      }
+      .search{ min-width:100%; max-width:100%; order: 1; }
       #wishlistBtn{ order: 2; }
       #cartBtn{ order: 3; }
     }
@@ -477,12 +358,10 @@
       }
       syncCounts();
 
-      // Search event
       const input = document.getElementById("artSearch");
       if (input){
         input.addEventListener("input", () => {
-          const q = input.value.trim();
-          window.dispatchEvent(new CustomEvent("art:search", { detail: { query: q } }));
+          window.dispatchEvent(new CustomEvent("art:search", { detail: { query: input.value.trim() } }));
         });
       }
 
@@ -509,7 +388,6 @@
         setTimeout(() => { t.style.opacity = "0"; t.style.transform = "translateY(6px)"; }, 1700);
       }
 
-      // Buttons toast
       const cartBtn = document.getElementById("cartBtn");
       const wishlistBtn = document.getElementById("wishlistBtn");
       cartBtn && cartBtn.addEventListener("click", () => toast("السلة جاهزة — اربطيها بصفحة Checkout لاحقًا ✨"));
@@ -520,7 +398,6 @@
       drawerCart && drawerCart.addEventListener("click", () => toast("السلة جاهزة — اربطيها بصفحة Checkout لاحقًا ✨"));
       drawerWish && drawerWish.addEventListener("click", () => toast("المفضلة — اربطيها بصفحة Wishlist لاحقًا 💗"));
 
-      // Drawer controls
       const burgerBtn = document.getElementById("burgerBtn");
       const drawer = document.getElementById("mobileDrawer");
       const overlay = document.getElementById("drawerOverlay");

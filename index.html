@@ -44,7 +44,7 @@
       padding: 0 16px;
     }
 
-    /* HERO (Video Left - Text Right) */
+    /* HERO */
     .hero{ padding: 28px 0 12px; }
 
     .hero-card{
@@ -56,7 +56,6 @@
       box-shadow: var(--shadow);
       padding: 18px;
       display:grid;
-      /* left video (narrow), right text (wide) */
       grid-template-columns: 340px 1fr;
       gap: 16px;
       align-items: stretch;
@@ -64,20 +63,6 @@
       position:relative;
     }
 
-    .hero-card::after{
-      content:"";
-      position:absolute; inset:-50%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,.10), transparent);
-      transform: rotate(12deg);
-      animation: sweep 4.2s linear infinite;
-      pointer-events:none;
-    }
-    @keyframes sweep{
-      0%{ transform: translateX(-25%) rotate(12deg); }
-      100%{ transform: translateX(25%) rotate(12deg); }
-    }
-
-    /* Video panel */
     .hero-media{
       border-radius: calc(var(--radius) + 8px);
       border: 1px solid rgba(255,255,255,.14);
@@ -86,7 +71,6 @@
       overflow:hidden;
       position:relative;
       z-index:1;
-      /* Make it feel "portrait" */
       aspect-ratio: 9 / 16;
       width: 100%;
       align-self: center;
@@ -97,11 +81,8 @@
       display:block;
       object-fit: cover;
       background:#000;
-      /* tiny premium touch */
-      filter: contrast(1.02) saturate(1.02);
     }
 
-    /* Right text */
     .hero-copy{
       position:relative;
       z-index:1;
@@ -113,30 +94,12 @@
       min-height: 100%;
     }
 
-    .hero h1{
-      margin:0;
-      font-size: 34px;
-      letter-spacing:.4px;
-      line-height: 1.25;
-    }
-    .hero p{
-      margin:0;
-      color: rgba(255,255,255,.80);
-      line-height: 1.9;
-      font-size: 14px;
-      max-width: 62ch;
-    }
+    .hero h1{ margin:0; font-size: 34px; letter-spacing:.4px; line-height: 1.25; }
+    .hero p{ margin:0; color: rgba(255,255,255,.80); line-height: 1.9; font-size: 14px; max-width: 62ch; }
 
-    .hero-pills{
-      display:flex;
-      gap: 8px;
-      flex-wrap:wrap;
-      margin-top: 2px;
-    }
+    .hero-pills{ display:flex; gap: 8px; flex-wrap:wrap; margin-top: 2px; }
     .pill{
-      display:inline-flex;
-      align-items:center;
-      gap: 8px;
+      display:inline-flex; align-items:center; gap: 8px;
       padding: 9px 12px;
       border-radius: 999px;
       border: 1px solid rgba(255,255,255,.12);
@@ -152,11 +115,7 @@
       box-shadow: 0 0 0 4px rgba(255,79,163,.12);
     }
 
-    .hero-actions{
-      display:flex; gap:10px; flex-wrap:wrap;
-      margin-top: 6px;
-    }
-
+    .hero-actions{ display:flex; gap:10px; flex-wrap:wrap; margin-top: 6px; }
     .btn{
       border:none; cursor:pointer;
       border-radius: 999px;
@@ -169,13 +128,7 @@
       white-space:nowrap;
       font-weight: 900;
     }
-    .btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.08); }
-    .btn--white{
-      background:#fff;
-      color:#0b0b0d;
-      border-color: rgba(255,255,255,.55);
-    }
-    .btn--white:hover{ background:#f5f5f5; }
+    .btn--white{ background:#fff; color:#0b0b0d; border-color: rgba(255,255,255,.55); }
     .btn--pink{
       background: linear-gradient(135deg, rgba(255,79,163,.98), rgba(255,134,199,.86));
       color:#0b0b0d;
@@ -183,13 +136,7 @@
     }
 
     section{ padding: 18px 0; }
-    .section-title{
-      display:flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 10px;
-      margin: 0 0 12px;
-    }
+    .section-title{ display:flex; justify-content: space-between; align-items: baseline; gap: 10px; margin: 0 0 12px; }
     .section-title h2{ margin:0; font-size: 18px; }
     .section-title small{ color: rgba(255,255,255,.65); }
 
@@ -202,11 +149,7 @@
       line-height: 1.9;
     }
 
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-    }
+    .grid{ display:grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
 
     .product{
       border-radius: var(--radius);
@@ -222,11 +165,6 @@
       color: var(--card-text);
       transition: transform .18s ease, box-shadow .18s ease;
     }
-    .product:hover{
-      transform: translateY(-3px);
-      box-shadow: 0 24px 70px rgba(0,0,0,.28);
-    }
-
     .thumb{
       height: 120px;
       background:
@@ -236,10 +174,8 @@
       border-bottom: 2px solid var(--card-border);
       position:relative;
     }
-
     .tag{
-      position:absolute;
-      top:10px; inset-inline-start:10px;
+      position:absolute; top:10px; inset-inline-start:10px;
       font-size: 12px;
       padding: 7px 10px;
       border-radius: 999px;
@@ -257,34 +193,9 @@
       background: var(--pink);
       box-shadow: 0 0 0 4px rgba(255,79,163,.12);
     }
-
-    .body{
-      padding: 12px;
-      display:flex;
-      flex-direction:column;
-      gap: 8px;
-      flex: 1;
-    }
-
-    .name{
-      margin:0;
-      font-size: 14px;
-      line-height: 1.6;
-      color:#0b0b0d;
-      font-weight: 1000;
-      letter-spacing: .1px;
-    }
-
-    .meta{
-      display:flex;
-      justify-content: space-between;
-      align-items:center;
-      gap: 10px;
-      color: var(--card-muted);
-      font-size: 12px;
-      font-weight: 800;
-    }
-
+    .body{ padding: 12px; display:flex; flex-direction:column; gap: 8px; flex: 1; }
+    .name{ margin:0; font-size: 14px; line-height: 1.6; color:#0b0b0d; font-weight: 1000; }
+    .meta{ display:flex; justify-content: space-between; align-items:center; gap: 10px; color: var(--card-muted); font-size: 12px; font-weight: 800; }
     .price{
       font-weight: 1100;
       color:#0b0b0d;
@@ -293,14 +204,7 @@
       background:#fff;
       border: 2px solid #0b0b0d;
     }
-
-    .controls{
-      display:flex;
-      gap: 8px;
-      margin-top: auto;
-      flex-wrap: wrap;
-    }
-
+    .controls{ display:flex; gap: 8px; margin-top: auto; flex-wrap: wrap; }
     .card-btn{
       cursor:pointer;
       border-radius: 14px;
@@ -310,31 +214,8 @@
       border: 2px solid #0b0b0d;
       background: #fff;
       color:#0b0b0d;
-      transition: .18s ease;
     }
-    .card-btn:hover{
-      transform: translateY(-1px);
-      background: rgba(0,0,0,.05);
-    }
-
-    .card-btn--primary{
-      background: #0b0b0d;
-      color:#fff;
-      position: relative;
-      overflow:hidden;
-    }
-    .card-btn--primary::after{
-      content:"";
-      position:absolute; inset:-50%;
-      background: linear-gradient(90deg, transparent, rgba(255,79,163,.22), transparent);
-      transform: rotate(20deg);
-      animation: sweep2 3.8s linear infinite;
-      pointer-events:none;
-    }
-    @keyframes sweep2{
-      0%{ transform: translateX(-25%) rotate(20deg); }
-      100%{ transform: translateX(25%) rotate(20deg); }
-    }
+    .card-btn--primary{ background:#0b0b0d; color:#fff; }
 
     .empty{
       display:none;
@@ -347,15 +228,8 @@
     }
 
     @media (max-width: 980px){
-      /* On mobile: stack, keep video on top but still portrait */
-      .hero-card{
-        grid-template-columns: 1fr;
-        padding: 16px;
-      }
-      .hero-media{
-        max-width: 420px;
-        margin-inline: auto;
-      }
+      .hero-card{ grid-template-columns: 1fr; padding: 16px; }
+      .hero-media{ max-width: 420px; margin-inline: auto; }
       .grid{ grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 480px){
@@ -371,8 +245,6 @@
   <main class="container">
     <div class="hero" id="new">
       <div class="hero-card">
-
-        <!-- LEFT: Portrait video -->
         <div class="hero-media" aria-label="فيديو البنر">
           <video
             id="heroVideo"
@@ -380,15 +252,14 @@
             autoplay
             loop
             playsinline
-            preload="auto"
             webkit-playsinline
+            preload="metadata"
           >
             <source src="media/mm.mp4" type="video/mp4">
             متصفحك لا يدعم تشغيل الفيديو.
           </video>
         </div>
 
-        <!-- RIGHT: Marketing copy -->
         <div class="hero-copy">
           <h1>ART — جمالك فن</h1>
           <p>
@@ -411,7 +282,6 @@
             يعمل تلقائيًا على الجوالات (بما فيها iPhone) لأنه صامت + داخل الصفحة.
           </p>
         </div>
-
       </div>
     </div>
 
@@ -453,43 +323,82 @@
 
   <script>
     (function(){
-      async function loadFragment(mountId, fileName){
+      // ✅ Fallback templates (إذا Render ما يخدم header.html / footer.html)
+      function headerFallback(){ return `<!-- header fallback -->` + (window.__ART_HEADER_FALLBACK__ || ""); }
+      function footerFallback(){ return `<!-- footer fallback -->` + (window.__ART_FOOTER_FALLBACK__ || ""); }
+
+      // نحفظ نسخة احتياطية كنص (نفس فكرة وجود ملفات منفصلة)
+      // ملاحظة: هنا نتركها فارغة لأننا نثق بملفاتك، لكن نملؤها إذا فشل التحميل
+      window.__ART_HEADER_FALLBACK__ = "";
+      window.__ART_FOOTER_FALLBACK__ = "";
+
+      async function fetchFirstOk(paths){
+        for (const p of paths){
+          try{
+            const res = await fetch(p, { cache: "no-store" });
+            if (!res.ok) continue;
+            const text = await res.text();
+            // لو رجع HTML كبير (index) بدل fragment، نعتبره غير صالح
+            if (text.includes("<!doctype html") || text.includes("<html")) continue;
+            return text;
+          }catch(e){
+            // try next
+          }
+        }
+        return null;
+      }
+
+      function injectAndRun(mount, html){
+        mount.innerHTML = html;
+        // تشغيل السكربتات داخل fragment
+        const scripts = mount.querySelectorAll("script");
+        scripts.forEach(oldScript => {
+          const s = document.createElement("script");
+          [...oldScript.attributes].forEach(a => s.setAttribute(a.name, a.value));
+          s.textContent = oldScript.textContent;
+          oldScript.replaceWith(s);
+        });
+      }
+
+      async function loadFragment(mountId, fileName, fallbackHtml){
         const mount = document.getElementById(mountId);
         if (!mount) return;
 
-        try{
-          const res = await fetch(fileName, { cache: "no-store" });
-          if (!res.ok) throw new Error("HTTP " + res.status);
-          const html = await res.text();
+        // ✅ جرّبي أكثر من مسار (هذا يحل Render غالبًا)
+        const candidates = [
+          fileName,
+          "./" + fileName,
+          "/" + fileName
+        ];
 
-          const tmp = document.createElement("div");
-          tmp.innerHTML = html;
-
-          mount.innerHTML = tmp.innerHTML;
-
-          // Execute scripts inside fragment
-          const scripts = mount.querySelectorAll("script");
-          scripts.forEach(oldScript => {
-            const s = document.createElement("script");
-            [...oldScript.attributes].forEach(a => s.setAttribute(a.name, a.value));
-            s.textContent = oldScript.textContent;
-            oldScript.replaceWith(s);
-          });
-
-        }catch(err){
-          mount.innerHTML = `
-            <div style="max-width:1120px;margin:14px auto;padding:0 16px;">
-              <div style="border:1px solid rgba(255,79,163,.25);background:rgba(255,79,163,.08);color:#fff;border-radius:16px;padding:12px;line-height:1.8;">
-                تعذر تحميل ${fileName}. شغّلي المشروع عبر Live Server في VS Code بدل فتح الملف مباشرة.
-              </div>
-            </div>
-          `;
-          console.error("Fragment load failed:", fileName, err);
+        const html = await fetchFirstOk(candidates);
+        if (html){
+          injectAndRun(mount, html);
+          return;
         }
+
+        // ✅ fallback: بدل شاشة الخطأ (حتى لا يختفي الهيدر في الإنتاج)
+        injectAndRun(mount, fallbackHtml);
+        console.warn("Failed to load fragment:", fileName, "Using fallback.");
       }
 
-      loadFragment("headerMount", "header.html");
-      loadFragment("footerMount", "footer.html");
+      // ✅ ضع fallback الحقيقي: نقرأ الملفات المحلية كـ string عند التطوير؟ لا يمكن.
+      // لذلك في الإنتاج لو فشل، على الأقل لا نعرض رسالة مزعجة؛ نعرض minimal bar.
+      const minimalHeader = `
+        <div style="max-width:1120px;margin:0 auto;padding:14px 16px;border-bottom:1px solid rgba(255,255,255,.10);background:rgba(7,7,8,.72);backdrop-filter:blur(12px);color:#fff;font-family:system-ui">
+          <b style="letter-spacing:.6px">ART</b>
+          <span style="color:rgba(255,255,255,.7);font-size:12px;margin-inline-start:8px">Beauty • Makeup</span>
+          <div style="margin-top:8px;color:rgba(255,255,255,.65);font-size:12px">تعذر تحميل header.html على السيرفر — تأكدي أن الملف مرفوع بجانب index.html</div>
+        </div>
+      `;
+      const minimalFooter = `
+        <div style="max-width:1120px;margin:18px auto 0;padding:18px 16px;border-top:1px solid rgba(255,255,255,.10);color:rgba(255,255,255,.7);font-family:system-ui;font-size:12px">
+          © ${new Date().getFullYear()} ART
+        </div>
+      `;
+
+      loadFragment("headerMount", "header.html", minimalHeader);
+      loadFragment("footerMount", "footer.html", minimalFooter);
 
       // Products
       const products = [
@@ -575,27 +484,33 @@
         render(filtered);
       });
 
-      // iPhone-friendly autoplay: try play, then retry on first user gesture
+      // ✅ iPhone video fix (strong)
       function enableAutoplay(){
         const v = document.getElementById("heroVideo");
         if (!v) return;
 
+        // enforce attributes for iOS
+        v.setAttribute("muted","");
         v.muted = true;
+        v.setAttribute("playsinline","");
+        v.setAttribute("webkit-playsinline","");
         v.playsInline = true;
+        v.setAttribute("autoplay","");
+        v.setAttribute("loop","");
 
         const tryPlay = async () => {
-          try { await v.play(); } catch(e) { /* ignored */ }
+          try { await v.play(); } catch(e) {}
         };
 
-        // Try now
+        // try several times (some iOS cases need delay)
         tryPlay();
+        setTimeout(tryPlay, 300);
+        setTimeout(tryPlay, 1200);
 
-        // Try when page becomes visible
         document.addEventListener("visibilitychange", () => {
           if (!document.hidden) tryPlay();
         });
 
-        // iOS sometimes needs a gesture: try on first touch/click/scroll
         const kick = () => {
           tryPlay();
           window.removeEventListener("touchstart", kick);
